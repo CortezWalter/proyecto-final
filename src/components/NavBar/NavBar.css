@@ -1,0 +1,17 @@
+.nav-wrapper {
+  padding: 0px 20px 5px 20px;
+  background-color: rgb(71, 71, 71);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Logo {
+  justify-self: left;
+  width: 100px;
+  height: auto;
+}
+
+.icono {
+  justify-self: right;
+  align-self: center;
+}

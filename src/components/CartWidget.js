@@ -1,6 +1,9 @@
+
 function CartWidget () {
     return (
-        <i className="fas fa-shopping-cart"></i>
+        <>
+            <i className="fas fa-shopping-cart"></i>
+        </>
     )
 }
 

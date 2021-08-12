@@ -1,31 +1,50 @@
-import React from 'react';
+import React, {  useState } from 'react';
 
-class itemCount extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {contador: 0, stock:10};
-    }
+function ItemCount (){
+    const [contador, setContador] = useState(0);
 
-    onIncrease() {
-        this.setState = ({contador: this.state.contador +1});
-        this.setState = ({stock: this.state.stock -1});
-    }
-
-    onDecrease () {
-        this.setState = ({contador: this.state.contador -1});
-        this.setState = ({stock: this.state.stock +1});
-    }
-
-    render () {
-        return (
-            <div>
-                <button onClick={this.onIncrease.bind(this)}>Agregar</button>
-                <button onClick={this.onDecrease.bind(this)}>Quitar</button>
-                <p>{this.state.contador}</p>
-                <p>{this.state.stock}</p>
-            </div>
-        );
-    }
+    return (
+        <div>
+            <button onClick={() => setContador(contador + 1)}>{contador}</button>
+        </div>
+    );
 }
 
-export default itemCount;
+
+// class ItemCount extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {contador: 0, stock:10};
+//     }
+
+//     onIncrease() {
+//         this.setState({
+//             ...this.state,
+//             contador: this.state.contador + 1            
+//         })
+//     }
+
+//     onDecrease () {
+//         this.setState({
+//             ...this.state,
+//             contador: this.state.contador - 1
+//         })
+//         this.setState({
+//             ...this.stock,
+//             stock: this.state.stock + 1
+//         });
+//     }
+
+//     render () {
+//         return (
+//             <div>
+//                 <button onClick={this.onIncrease.bind(this)}>Agregar</button>
+//                 <button onClick={this.onDecrease.bind(this)}>Quitar</button>
+//                 <p>Agregaste tantos item al carro: {this.state.contador}</p>
+//                 <p>Tu stock es de: {this.state.stock}</p>
+//             </div>
+//         );
+//     }
+// }
+
+export default ItemCount;

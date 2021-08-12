@@ -1,14 +1,14 @@
 import './App.css';
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
-import itemCount from './components/itemCount';
+import ItemCount from './components/ItemCount';
 
 function App() {
   return (
     <>
       <NavBar />
       <ItemListContainer Mensaje="Bienvenido Aaron" />
-      <itemCount />
+      <ItemCount />
     </>
   );
 }

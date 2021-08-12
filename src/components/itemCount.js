@@ -5,7 +5,9 @@ function ItemCount (){
 
     return (
         <div>
-            <button onClick={() => setContador(contador + 1)}>{contador}</button>
+            <button onClick={() => setContador(contador + 1)}>Sumar</button>
+            <button onClick={() => setContador(contador - 1)}>Restar</button>
+            <p>{contador}</p>
         </div>
     );
 }
